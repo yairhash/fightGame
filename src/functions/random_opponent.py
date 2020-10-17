@@ -3,7 +3,8 @@ import sys
 import os
 from characters.goblin import Goblin
 from characters.robot import Robot
-from wepons.wepons import Wepon
+from wepons.goblin_wepon import Goblin_wepon
+from wepons.robot_wepon import Robot_wepon
 
 
 def your_random_opponent():
@@ -17,17 +18,15 @@ def your_random_opponent():
     actual_character_type = actual_character.get_type()
 
     if actual_character_type=='robot':
-        opponent_wepon_class=Wepon()
+        opponent_wepon_class=Robot_wepon()
         wepon_name,wepon_power=opponent_wepon_class.robot_wepon(opponent_wepon_class.robot_wepon_obj)
         setattr(robot1,'wepon_name',wepon_name)
         setattr(robot1,'wepon_power',wepon_power)
         setattr(robot2,'wepon_name',wepon_name)
         setattr(robot2,'wepon_power',wepon_power)
-        
-        print(f'local {wepon_power}')
       
     else:
-        opponent_wepon_class=Wepon()
+        opponent_wepon_class=Goblin_wepon()
         wepon_name,wepon_power=opponent_wepon_class.goblin_wepon(opponent_wepon_class.goblin_wepon_obj)
         setattr(goblin1,'wepon_name',wepon_name)
         setattr(goblin1,'wepon_power',wepon_power)
