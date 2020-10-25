@@ -16,11 +16,11 @@ class Wizard_wepon():
         
             
     wizard_wepon_obj={
-                    'dragon':60,
-                    'special wand':35,
-                    'stones from the sky':50,
-                    'mega powers':70,         
-                    'broom':10
+                    'dragon':random.randint(40,80),
+                    'special wand':random.randint(40,80),
+                    'stones from the sky':random.randint(40,80),
+                    'mega powers':random.randint(40,80),         
+                    'broom':random.randint(40,80)
                         }
                         
     def wizard_wepon(self,wizard_wepon_obj,your_wepon_coise):

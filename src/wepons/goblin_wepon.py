@@ -3,11 +3,11 @@ import random
 class Goblin_wepon(): 
   
     goblin_wepon_obj={
-                    'dagger':30,
-                    'axe':38,
-                    'electro bomb':45,
-                    'toxic breath':69,
-                    'goblin bite' :25        
+                    'dagger':random.randint(40,80),
+                    'axe':random.randint(40,80),
+                    'electro bomb':random.randint(40,80),
+                    'toxic breath':random.randint(40,80),
+                    'goblin bite' :random.randint(40,80)        
                         }
                         
     def goblin_wepon(self,goblin_wepon_obj):

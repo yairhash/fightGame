@@ -1,4 +1,4 @@
-
+import random
 class Archer_wepon(): 
     
     def wepon_choise(self):
@@ -12,11 +12,11 @@ class Archer_wepon():
         return your_wepon_coise             
     
     archer_wepon_obj={
-                    'regular bow':10,
-                    'multy arrow attack':72,
-                    'fire bow':40,
-                    'tiny bombs':30,         
-                    'ice arrow':25
+                    'regular bow':random.randint(40,80),
+                    'multy arrow attack':random.randint(40,80),
+                    'fire bow':random.randint(40,80),
+                    'tiny bombs':random.randint(40,80),         
+                    'ice arrow':random.randint(40,80)
                         }
             
     def archer_wepon(self,archer_wepon_obj,your_wepon_coise):

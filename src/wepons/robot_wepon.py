@@ -2,11 +2,11 @@ import random
 class Robot_wepon():
       
     robot_wepon_obj={
-                    'lazer eyes':44,
-                    'rubber bullets':33,
-                    'smoke screen':20,
-                    'machine combo attack':71,
-                    'gun shot':50         
+                    'lazer eyes':random.randint(40,80),
+                    'rubber bullets':random.randint(40,80),
+                    'smoke screen':random.randint(40,80),
+                    'machine combo attack':random.randint(40,80),
+                    'gun shot':random.randint(40,80)         
                         }
     
     def robot_wepon(self,robot_wepon_obj):
