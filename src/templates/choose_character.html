@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+
+<div class='card_wrapper'>
+    <div class="card">
+        <h1>choose_character: wizard,archer,goblin,robot</h1>
+        <form  action="choose_character" method="post">
+          
+            <label for="character">character</label>
+            <input type="text" name='character' class='field'>
+
+            <input type="submit" value="enter" class="btn">
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}
