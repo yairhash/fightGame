@@ -3,10 +3,10 @@ from characters.character import Character
 from wepon.wepon import Wepon
 
 def your_random_opponent(player):
-    archer=Character('archer',250,'',0,'',0)
-    robot=Character('robot',250,'',0,'',0,)
-    goblin=Character('goblin',250,'',0,'',0)
-    wizard=Character('wizard',250,'',0,'',0)
+    archer=Character('archer',250,'',0,'',0,0,0)
+    robot=Character('robot',250,'',0,'',0,0,0)
+    goblin=Character('goblin',250,'',0,'',0,0,0)
+    wizard=Character('wizard',250,'',0,'',0,0,0)
     opponents_list=[archer,robot,goblin,wizard]
     actual_opponents=[]
     for opponent in opponents_list:

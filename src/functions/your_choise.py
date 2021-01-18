@@ -2,12 +2,12 @@ from .random_opponent import your_random_opponent
 from characters.character import Character
 from wepon.wepon import Wepon
 
-def your_choise( char_type):
+# def your_choise( char_type):
    
-    wepon=Wepon()
-    wepon_obj=wepon.print_wepon(char_type)
-    shield_obj=wepon.print_shield(char_type)
-    return wepon_obj,shield_obj
+#     # wepon=Wepon()
+#     # wepon_obj=wepon.print_wepon(char_type)
+#     # shield_obj=wepon.print_shield(char_type)
+#     # return wepon_obj,shield_obj
     
     
     

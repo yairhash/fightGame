@@ -1,5 +1,7 @@
 import random
+import itertools
 class Wepon():
+ 
   
     wepon_list=[
         {
@@ -49,7 +51,8 @@ class Wepon():
             'magic shield':random.randint(40,80),
             'invisable glass shield':random.randint(40,80),
             'wind shield':random.randint(40,80),
-            'bubble shield':random.randint(40,80)      
+            'bubble shield':random.randint(40,80),      
+            'ofir shield':random.randint(40,80)      
         },
         {
             'name':'robot',
@@ -68,27 +71,38 @@ class Wepon():
     ]
     
     
-    def print_wepon(self,char_type):
-        for wepon_obj in self.wepon_list:
-            if char_type==wepon_obj['name']:
-                return wepon_obj
+    def print_wepon_and_shield(self,char_type):
+        wepon_list=self.wepon_list
+        shield_list=self.shield_list
+        for(wepon_obj,shield_obj) in zip(wepon_list,shield_list):
+            if char_type==wepon_obj['name'] and char_type==shield_obj['name']:
+                   print(wepon_obj.keys(),shield_obj.keys())                     
+            return 'somthing went wrong'
+            
+            
+     
+     
+    def get_wepon_and_shield_power(self,wepon_name,shield_name,char_type):
+        shield_list=self.shield_list
+        wepon_list=self.wepon_list
+        print(wepon_name)
+        print(shield_name)
+        for( wepon_obj,shield_obj) in zip(wepon_list,shield_list):
+            if char_type==wepon_obj['name'] and char_type==shield_obj['name']:
+                    wepon_power=wepon_obj.get(wepon_name)
+                    shield_power=shield_obj.get(shield_name)
+                    print(wepon_power,shield_power)
+                    return wepon_power,shield_power                     
+            return 'somthing went wrong'
+            
+            
+     
+            
            
-    def print_shield(self,char_type):        
-        for shield_obj in self.shield_list:
-            if char_type==shield_obj['name']:
-                return shield_obj
-        
-           
-    def get_wepon_value(self,wepon_name):
-        for wepon_obj in self.wepon_list:
-            if wepon_name in wepon_obj:
-                return wepon_obj[wepon_name]
-           
-    def get_shield_value(self,shield_name):                
-        for shield_obj in self.shield_list:
-            if shield_name in shield_obj:
-               return shield_obj[shield_name]
-        
+  
+                 
+  
+          
 
     
  
