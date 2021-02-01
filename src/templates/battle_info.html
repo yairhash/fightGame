@@ -21,14 +21,16 @@
     <div class="card">
         <a href="/battle_results" class="btn btn--secondery">attack</a><br>
         <a href="/start_game" class="btn btn--secondery">start new game</a><br>
-
+        <a href="/dashboard" class="btn btn--secondery">return to dashboard</a><br>
         <h1>battle output</h1>
         <p>
             {{battle_report}}
-        
-
+        </p><br><br>
+        <p>
+            {{battle_results}}
         </p>
     </div>
+
 </div>
 
 <div class="card">
@@ -41,8 +43,7 @@
             <strong>shield name:</strong>{{opponent['shield_name']}} <br>
             <strong>shield power:</strong>{{opponent['shield_power']}} <br>
         </p>
-    </div>      
-    
+    </div>        
 </div>
 
 {% endblock %}

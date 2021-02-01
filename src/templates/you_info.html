@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<div class="card">
+    <h2 class="center">Your info</h1>
+        <p>
+            <strong>name:</strong>{{player.char_type}} <br>
+            <strong>life:</strong>{{player.full_life}} <br>
+            <strong>wepon name:</strong> {{player['wepon_name']}} <br>
+            <strong>wepon power:</strong>{{player['wepon_power']}} <br>
+            <strong>shield name:</strong>{{player['shield_name']}} <br>
+            <strong>shield power:</strong>{{player['shield_power']}} <br>
+        </p>
+    </div>      
+</div>
+
+{% endblock %}
+
+
+

@@ -18,15 +18,32 @@
 </div>    
 
 <div class="card">
-    <h2 class="center">Your info</h1>
+    <h1 class="center">Your info</h1>
         <p>
-            <strong>ID:</strong> {{session['_id']}} <br>
-            <strong>Name:</strong>{{session['name']}} <br>
-            <strong>Email:</strong>{{session['email']}} <br>
-            <strong>Wins:</strong>{{session['wins']}} <br>
-            <strong>Losts:</strong>{{session['losts']}} <br>
+            <strong>ID:</strong> {{online_user._id}} <br>
+            <strong>Name:</strong>{{online_user.name}} <br>
+            <strong>Email:</strong>{{online_user.email}} <br>
+            <strong>Wins:</strong>{{online_user.wins}} <br>
+            <strong>Losts:</strong>{{online_user.losts}} <br>
+            <a href="/my_ranking" class="btn btn--secondery">see your position</a><br>
+            <p>
+               {{my_ranking}} 
+            </p>
+        </p><br><br>
 
+        <p>
+            <a href="/top_5" class="btn btn--secondery">top_5</a><br>
+            {%for resulst in top_5%}
+            <table>
+                <tr>
+                    <th>
+                        {{resulst}}
+                    </th>   
+                </tr>
+            </table>
+            {%endfor%}
         </p>
+
     </div>      
     
 </div>
